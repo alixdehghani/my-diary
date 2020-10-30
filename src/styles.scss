@@ -1,7 +1,7 @@
 @import "~@angular/material/theming";
 
-$rtl-typography: mat-typography-config(
-    $font-family: 'Vazir FD, Roboto, "Helvetica Neue", sans-serif',
+$custome-font-typography: mat-typography-config(
+    $font-family: 'Vazir FD, Roboto, "Helvetica Neue", sans-serif'
 );
 
 *,
@@ -17,6 +17,10 @@ body {
     height: 100%;
 }
 
+html {
+    font-size: 62.5%; // 1rem = 10px
+}
+
 body {
     box-sizing: border-box;
     font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -24,6 +28,6 @@ body {
 
 html[dir="rtl"] {
     app-root {
-        font-family: mat-font-family($rtl-typography);
+        font-family: mat-font-family($custome-font-typography);
     }
 }
