@@ -61,6 +61,6 @@ body {
 
 html[dir="rtl"] {
     app-root {
-        font-family: mat-font-family($custome-font-typography);
+        @include mat-core($custome-font-typography);
     }
 }
