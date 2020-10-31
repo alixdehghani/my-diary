@@ -1,0 +1,18 @@
+@import '~@angular/material/theming';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: mat-color($mat-indigo, 500);
+    color: mat-color($mat-grey, A100);
+    padding: .5rem 1rem;
+    
+    &[dir="ltr"] &__github  {
+        margin-left: auto;
+    }
+    
+    &[dir="rtl"] &__github {
+        margin-right: auto;
+    }
+}
+ 
