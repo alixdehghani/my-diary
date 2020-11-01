@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-.navbar {
+.navbar-window {
     display: flex;
     align-items: center;
     background-color: mat-color($mat-indigo, 500);
@@ -13,6 +13,24 @@
     
     &[dir="rtl"] &__github {
         margin-right: auto;
+    }
+
+    @media only screen and (max-width: 550px) {
+        &__storyes, &__about, &__contact{
+            display: none;
+        }
+    }
+}
+
+.navbar-mobile {
+    align-items: center;
+    justify-content: center;
+    background-color: mat-color($mat-indigo, 500);
+    color: mat-color($mat-grey, A100);
+    padding: .5rem 1rem;
+    display: none;
+    @media only screen and (max-width: 550px) {
+        display: flex;
     }
 }
  
