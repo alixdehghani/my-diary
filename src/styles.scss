@@ -6,6 +6,8 @@ $custome-font-typography: mat-typography-config(
     $font-family: 'Vazir FD, Roboto, "Helvetica Neue", sans-serif',
 );
 
+@include mat-core($custome-font-typography);
+
 $candy-app-primary: mat-palette($mat-indigo);
 $candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
 $candy-app-warn: mat-palette($mat-red);
@@ -56,11 +58,4 @@ html {
 
 body {
     box-sizing: border-box;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-html[dir="rtl"] {
-    app-root {
-        @include mat-core($custome-font-typography);
-    }
 }
