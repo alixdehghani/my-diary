@@ -2,11 +2,23 @@
 
 @include mat-core();
 
-$custome-font-typography: mat-typography-config(
-    $font-family: 'Vazir FD, Roboto, "Helvetica Neue", sans-serif',
+$custome-font-typography-rtl: mat-typography-config(
+    $font-family: 'Vazir FD, sans-serif',
 );
 
-@include mat-core($custome-font-typography);
+$custome-font-typography-ltr: mat-typography-config(
+    $font-family: 'Roboto, "Helvetica Neue", sans-serif',
+);
+
+
+@include mat-core($custome-font-typography-ltr);
+html[dir="rtl"] {
+    @include mat-core($custome-font-typography-rtl);
+}
+
+html[dir="ltr"] {
+    @include mat-core($custome-font-typography-ltr);
+}
 
 $candy-app-primary: mat-palette($mat-indigo);
 $candy-app-accent: mat-palette($mat-pink, A200, A100, A400);
